@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>비브아 딥슬립 | 마사지 베개 1위, 역대급 신제품</title>
+<meta name="description" content="거북목 4대 핵심 원인 근육까지, 해부학적 각도로 풀어주는 경추 마사지 베개. 누적 판매 200,000+, 리뷰 120,000+, 평점 4.8. 비브아 딥슬립." />
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          sapphire: '#0F52BA',
+          navy: '#000926',
+          ice: '#D6E6F3',
+          powder: '#46C5D7',
+          orange: '#FF6B35',
+          yellow: '#FFBF00',
+        },
+        fontFamily: {
+          sans: ['Pretendard', 'system-ui', 'sans-serif'],
+        },
+        // 마사지베개 무드에 맞춘 여유로운 행간 — 각 사이즈에 line-height를 함께 지정해
+        // 반응형 text-* 유틸이 줄간격을 1로 덮어쓰는 문제를 원천 차단한다.
+        fontSize: {
+          'xs':   ['0.75rem',  { lineHeight: '1.6'  }],
+          'sm':   ['0.875rem', { lineHeight: '1.75' }],
+          'base': ['1rem',     { lineHeight: '1.85' }],
+          'lg':   ['1.125rem', { lineHeight: '1.85' }],
+          'xl':   ['1.25rem',  { lineHeight: '1.75' }],
+          '2xl':  ['1.5rem',   { lineHeight: '1.6'  }],
+          '3xl':  ['1.875rem', { lineHeight: '1.45' }],
+          '4xl':  ['2.25rem',  { lineHeight: '1.4'  }],
+          '5xl':  ['3rem',     { lineHeight: '1.38' }],
+          '6xl':  ['3.75rem',  { lineHeight: '1.32' }],
+          '7xl':  ['4.5rem',   { lineHeight: '1.26' }],
+          '8xl':  ['6rem',     { lineHeight: '1.2'  }],
+          '9xl':  ['8rem',     { lineHeight: '1.15' }],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #000926; overflow-x: clip; }
+  ::selection { background: #0F52BA; color: #fff; }
+
+  /* ===== generic enter reveal (light sections) ===== */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: .12s; }
+  .reveal.d2 { transition-delay: .24s; }
+  .reveal.d3 { transition-delay: .36s; }
+
+  .grad-text { background: linear-gradient(100deg,#46C5D7 0%,#0F52BA 60%,#fff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-pillow { -webkit-mask-image: radial-gradient(ellipse 70% 66% at 50% 48%, #000 50%, transparent 80%); mask-image: radial-gradient(ellipse 70% 66% at 50% 48%, #000 50%, transparent 80%); mix-blend-mode: screen; }
+
+  .glow-blue { box-shadow: 0 0 80px -10px rgba(15,82,186,.55); }
+  .ring-soft { box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+
+  @keyframes floaty { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-14px); } }
+  .floaty { animation: floaty 6s ease-in-out infinite; }
+
+  @keyframes pulseRing { 0%{ transform: scale(.85); opacity:.7;} 70%{opacity:0;} 100%{ transform: scale(1.6); opacity:0;} }
+  .pulse-ring::after{ content:''; position:absolute; inset:0; border-radius:9999px; border:2px solid #FF6B35; animation: pulseRing 2.2s ease-out infinite; }
+
+  .no-bar::-webkit-scrollbar{ display:none; }
+  .no-bar{ -ms-overflow-style:none; scrollbar-width:none; }
+
+  /* ===== scroll-storytelling scenes ===== */
+  .scene { position: relative; }
+  .scene-stage { position: sticky; top: 0; height: 100svh; min-height: 600px; overflow: hidden; }
+  .beat { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5.5rem 1.5rem 4rem; opacity: 0; will-change: opacity, transform; }
+  .beat.top { justify-content: flex-start; padding-top: 13vh; }
+  .scene-layer { position: absolute; left: 50%; transform: translateX(-50%); opacity: 0; pointer-events: none; will-change: transform, opacity; }
+
+  .scroll-cue { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 45; pointer-events: none; }
+  @keyframes cueBob { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(7px);} }
+  .scroll-cue .dot { animation: cueBob 1.6s ease-in-out infinite; }
+
+  #progressBar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; z-index: 60; background: linear-gradient(90deg,#46C5D7,#0F52BA 70%); box-shadow: 0 0 14px rgba(15,82,186,.6); }
+
+  @media (prefers-reduced-motion: reduce){
+    html { scroll-behavior: auto; }
+    .scene-stage { position: static; height: auto; min-height: 0; overflow: visible; }
+    .beat { position: relative; inset: auto; opacity: 1 !important; transform: none !important; padding: 4rem 1.5rem; min-height: 60vh; }
+    .beat.top { padding-top: 4rem; }
+    .scene-layer { position: relative; left: auto; transform: none !important; opacity: 1 !important; margin: 0 auto; }
+    .scroll-cue { display: none; }
+  }
+</style>
+</head>
+<body class="font-sans text-white antialiased">
+
+<!-- VIVOIR logo (inline symbol, recolorable via currentColor) -->
+<svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="vivoirLogo" viewBox="0 0 2235 395" fill="currentColor">
+    <path d="M57.25,0c11.63,0,22.35,6.31,27.99,16.49l147.3,265.81,8.81,16.11c4.17,7.63,15.13,7.63,19.3,0l8.87-16.23L416.76,16.49c5.64-10.18,16.36-16.49,27.99-16.49h45.26c9.09,0,14.87,9.73,10.51,17.7l-184.73,337.89c-27.99,51.2-101.58,51.2-129.57,0L1.48,17.7C-2.81,9.85,2.72.3,11.56,0h.42s45.26,0,45.26,0Z"/>
+    <path d="M729.25,0c11.63,0,22.35,6.31,27.99,16.49l147.3,265.81,8.81,16.11c4.17,7.63,15.13,7.63,19.3,0l8.87-16.23L1088.76,16.49c5.64-10.18,16.36-16.49,27.99-16.49h45.26c9.09,0,14.87,9.73,10.51,17.7l-184.74,337.89c-27.99,51.2-101.58,51.2-129.57,0L673.48,17.7c-4.29-7.85,1.24-17.4,10.08-17.69h.42s45.26,0,45.26,0Z"/>
+    <path d="M544,28c0-13.2,0-19.8,4.1-23.9,4.1-4.1,10.7-4.1,23.9-4.1h30c13.2,0,19.8,0,23.9,4.1,4.1,4.1,4.1,10.7,4.1,23.9v24c0,13.2,0,19.8-4.1,23.9-4.1,4.1-10.7,4.1-23.9,4.1h-30c-13.2,0-19.8,0-23.9-4.1-4.1-4.1-4.1-10.7-4.1-23.9v-24Z"/>
+    <path d="M1725,28c0-13.2,0-19.8,4.1-23.9,4.1-4.1,10.7-4.1,23.9-4.1h30c13.2,0,19.8,0,23.9,4.1,4.1,4.1,4.1,10.7,4.1,23.9v24c0,13.2,0,19.8-4.1,23.9-4.1,4.1-10.7,4.1-23.9,4.1h-30c-13.2,0-19.8,0-23.9-4.1-4.1-4.1-4.1-10.7-4.1-23.9v-24Z"/>
+    <path d="M544,146c0-13.2,0-19.8,4.1-23.9,4.1-4.1,10.7-4.1,23.9-4.1h30c13.2,0,19.8,0,23.9,4.1,4.1,4.1,4.1,10.7,4.1,23.9v220c0,13.2,0,19.8-4.1,23.9-4.1,4.1-10.7,4.1-23.9,4.1h-30c-13.2,0-19.8,0-23.9-4.1-4.1-4.1-4.1-10.7-4.1-23.9v-220Z"/>
+    <path d="M1725,146c0-13.2,0-19.8,4.1-23.9,4.1-4.1,10.7-4.1,23.9-4.1h30c13.2,0,19.8,0,23.9,4.1,4.1,4.1,4.1,10.7,4.1,23.9v220c0,13.2,0,19.8-4.1,23.9-4.1,4.1-10.7,4.1-23.9,4.1h-30c-13.2,0-19.8,0-23.9-4.1-4.1-4.1-4.1-10.7-4.1-23.9v-220Z"/>
+    <path d="M1648.08,62.05c-10.94-19.85-27.29-36.19-47.13-47.13-27.06-14.92-63.02-14.92-134.95-14.92h-87.07c-63.32.06-96.52.93-121.88,14.92-19.84,10.94-36.19,27.29-47.13,47.13-14.92,27.05-14.92,63.02-14.92,134.95s0,107.89,14.92,134.95l.52.93c10.93,19.43,27.08,35.43,46.61,46.21l1.28.69c25.2,13.33,58.34,14.17,120.6,14.23h13.07s74,0,74,0c70.81,0,106.76,0,133.67-14.23l1.28-.69c19.53-10.77,35.68-26.78,46.61-46.21l.52-.93c14.92-27.05,14.92-63.02,14.92-134.95s0-107.89-14.92-134.95ZM1581.44,274.35c-.7,7.95-1.57,12.73-2.29,15.61-.35,1.37-.64,2.21-.81,2.66-.17.43-.28.63-.31.7-3.65,6.62-9.1,12.06-15.71,15.71-.07.04-.27.14-.7.31-.45.17-1.29.46-2.66.81-2.88.73-7.66,1.6-15.61,2.29-17.08,1.49-39.97,1.56-77.35,1.56h-74c-37.38,0-60.27-.07-77.35-1.56-7.95-.69-12.73-1.56-15.61-2.29-1.37-.35-2.21-.64-2.66-.81-.43-.17-.63-.27-.7-.31-6.61-3.65-12.06-9.09-15.71-15.71-.03-.07-.14-.26-.31-.7-.17-.45-.46-1.29-.81-2.66-.72-2.88-1.59-7.66-2.29-15.61-1.49-17.08-1.56-39.97-1.56-77.35s.07-60.27,1.56-77.35c.7-7.95,1.57-12.73,2.29-15.61.35-1.37.64-2.21.81-2.66.17-.43.28-.63.31-.7,3.65-6.62,9.1-12.06,15.71-15.71.07-.04.27-.14.7-.31.45-.17,1.29-.46,2.66-.81,2.88-.73,7.66-1.6,15.61-2.29,17.08-1.49,39.97-1.56,77.35-1.56h74c37.38,0,60.27.07,77.35,1.56,7.95.69,12.73,1.56,15.61,2.29,1.37.35,2.21.64,2.66.81.43.17.63.27.7.31,6.61,3.65,12.06,9.1,15.71,15.71.03.07.14.26.31.7.17.45.46,1.29.81,2.66.72,2.88,1.59,7.66,2.29,15.61,1.49,17.08,1.56,39.97,1.56,77.35s-.07,60.27-1.56,77.35Z"/>
+    <path d="M2235,62.16c0,13.23,0,19.85-4.09,23.96-4.09,4.11-10.67,4.11-23.83,4.11h-164.55c-37.61,0-56.41,0-68.09,11.75-11.69,11.75-11.69,30.65-11.69,68.46v196.5c0,13.23,0,19.85-4.09,23.96-4.09,4.11-10.67,4.11-23.83,4.11h-33.91c-13.16,0-19.74,0-23.83-4.11-4.09-4.11-4.09-10.73-4.09-23.96v-146.37c0-103.97,0-155.96,32.13-188.26C1937.26,0,1988.97,0,2092.39,0h114.69c13.16,0,19.74,0,23.83,4.11,4.09,4.11,4.09,10.73,4.09,23.96v34.09Z"/>
+  </symbol>
+</svg>
+
+<!-- scroll progress bar -->
+<div id="progressBar"></div>
+
+<!-- ===================== NAV ===================== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <svg class="h-[18px] w-auto text-white" viewBox="0 0 2235 395" role="img" aria-label="VIVOIR"><use href="#vivoirLogo"/></svg>
+      <span class="hidden sm:inline-block text-white/40 font-medium text-sm leading-none border-l border-white/20 pl-2.5">딥슬립</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-white/70">
+      <a href="#why" class="hover:text-white transition">왜 딥슬립</a>
+      <a href="#angle" class="hover:text-white transition">정밀 틸팅</a>
+      <a href="#review" class="hover:text-white transition">리뷰</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a data-buy href="https://vivoir.kr" target="_blank" rel="noopener" class="rounded-full bg-sapphire hover:bg-[#0c449b] transition px-5 py-2 text-sm font-semibold text-white">구매하기</a>
+      <button id="navToggle" class="md:hidden text-white/80" aria-label="메뉴">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-navy/95 backdrop-blur">
+    <div class="px-6 py-4 flex flex-col gap-4 text-white/80">
+      <a href="#why" class="py-1">왜 딥슬립</a>
+      <a href="#angle" class="py-1">정밀 틸팅</a>
+      <a href="#review" class="py-1">리뷰</a>
+    </div>
+  </div>
+</header>
+
+<!-- scroll cue (hero only, fades on scroll) -->
+<div id="scrollCue" class="scroll-cue text-white/55 text-[11px] tracking-[0.2em] flex flex-col items-center gap-2">
+  <span>SCROLL</span>
+  <svg class="dot" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+</div>
+
+<!-- ===================== HERO (scene) ===================== -->
+<section id="top" class="scene" style="height:360vh">
+  <div class="scene-stage">
+    <!-- background glow -->
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute left-1/2 top-[20%] -translate-x-1/2 w-[120vw] sm:w-[70vw] h-[55vh] rounded-full blur-[120px] opacity-50" style="background:radial-gradient(circle,#0F52BA 0%,transparent 65%)"></div>
+      <div class="absolute right-[8%] bottom-[10%] w-[40vw] h-[30vh] rounded-full blur-[120px] opacity-30" style="background:radial-gradient(circle,#46C5D7 0%,transparent 70%)"></div>
+      <div class="absolute inset-0" style="background:linear-gradient(180deg,#000926 0%,#040b2e 55%,#000926 100%)"></div>
+    </div>
+
+    <!-- persistent product image, scales/fades in on the final beat -->
+    <img src="assets/pillow_hero.png" alt="비브아 딥슬립 마사지 베개" class="scene-layer hero-pillow select-none" draggable="false"
+         style="top:0; bottom:0; margin-top:auto; margin-bottom:auto; height:min(1900px,240svh); width:auto;"
+         data-anim='{"opacity":[0,1],"scale":[1.16,1],"y":[40,0],"range":[0.42,0.9]}' />
+
+    <!-- beat 0 -->
+    <div class="beat">
+      <p class="text-powder/90 text-xs sm:text-sm tracking-[0.3em] mb-6">VIVOIR DEEP SLEEP</p>
+      <h2 class="text-4xl sm:text-6xl lg:text-7xl font-bold">기다려주셔서<br />감사합니다</h2>
+    </div>
+
+    <!-- beat 1 -->
+    <div class="beat">
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
+        마사지 베개 <span class="text-powder">1위</span> 비브아,<br />역대급 신제품으로 돌아오다
+      </h2>
+    </div>
+
+    <!-- beat 2 (settle: headline + CTA, stays) -->
+    <div class="beat top z-10">
+      <p class="inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 mb-4">
+        <span class="h-px w-6 bg-white/30"></span> 마사지 베개 1위 · 비브아 <span class="h-px w-6 bg-white/30"></span>
+      </p>
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold">
+        <span class="grad-text">비브아 딥슬립</span>
+      </h1>
+      <p class="mt-5 text-base sm:text-lg text-white/70 max-w-xl">
+        거북목 4대 핵심 원인 근육까지,<br class="sm:hidden" /> 해부학적 각도로 풀어주는 경추 마사지 베개
+      </p>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <a data-buy href="https://vivoir.kr" target="_blank" rel="noopener" class="rounded-full bg-sapphire hover:bg-[#0c449b] transition px-7 py-3.5 text-sm sm:text-base font-semibold glow-blue">지금 구매하기</a>
+        <a href="#why" class="rounded-full ring-1 ring-white/20 hover:bg-white/5 transition px-7 py-3.5 text-sm sm:text-base font-semibold text-white/90">특징 살펴보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="relative border-y border-white/10 bg-[#04081f]">
+  <div class="max-w-6xl mx-auto px-6 py-16 sm:py-20">
+    <!-- rank social proof -->
+    <div class="reveal flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-white/55 mb-12">
+      <span class="flex items-center gap-1.5"><span class="text-[#03C75A] font-bold">N</span> NAVER 판매 1위</span>
+      <span class="h-3 w-px bg-white/15"></span>
+      <span class="flex items-center gap-1.5"><span class="text-[#FF6B35] font-bold">C</span> 쿠팡 판매 1위</span>
+      <span class="h-3 w-px bg-white/15"></span>
+      <span>출시 3일 판매 30,000+</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 text-center">
+      <div class="reveal">
+        <div class="text-5xl sm:text-6xl font-extrabold grad-text"><span class="count" data-to="200000">0</span>+</div>
+        <p class="mt-3 text-white/60">누적 판매량</p>
+      </div>
+      <div class="reveal d1">
+        <div class="text-5xl sm:text-6xl font-extrabold grad-text"><span class="count" data-to="120000">0</span>+</div>
+        <p class="mt-3 text-white/60">누적 리뷰 수</p>
+      </div>
+      <div class="reveal d2">
+        <div class="text-5xl sm:text-6xl font-extrabold grad-text"><span class="count" data-to="4.8" data-dec="1">0</span><span class="text-2xl sm:text-3xl text-white/40 font-bold"> / 5.0</span></div>
+        <p class="mt-3 text-white/60">리뷰 평점</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VIDEO BREAK 1 (brand film) ===================== -->
+<section class="relative h-[80vh] min-h-[460px] w-full overflow-hidden bg-black">
+  <video id="brandFilm" class="absolute inset-0 h-full w-full object-cover opacity-80" data-autoplay autoplay muted loop playsinline preload="metadata" poster="assets/cover.png">
+    <source src="assets/brand_film.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0" style="background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(0,9,38,.5),transparent 62%),linear-gradient(180deg,rgba(0,9,38,.5) 0%,rgba(0,9,38,.15) 42%,#000926 100%)"></div>
+  <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+    <p class="reveal text-[11px] tracking-[0.32em] text-powder/80 mb-5">BRAND FILM</p>
+    <h2 class="reveal d1 text-3xl sm:text-5xl font-bold">잠드는 순간까지,<br />비브아가 함께합니다</h2>
+  </div>
+</section>
+
+<!-- ===================== WHY / 거북목 (scene) ===================== -->
+<section id="why" class="scene" style="height:360vh">
+  <div class="scene-stage">
+    <div class="absolute inset-0" style="background:radial-gradient(circle at 70% 25%,rgba(255,107,53,.14),transparent 55%),#000926"></div>
+
+    <!-- beat 0 -->
+    <div class="beat">
+      <span class="inline-block rounded-full bg-orange/15 text-orange text-xs font-bold tracking-wider px-3 py-1.5 mb-7">KEY POINT · 경추 케어</span>
+      <h2 class="text-4xl sm:text-6xl font-bold">자고 일어나도<br />개운하지 않다면</h2>
+    </div>
+
+    <!-- beat 1 -->
+    <div class="beat">
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
+        원인은 굳어버린<br /><span class="text-orange">거북목 4대 핵심 원인 근육</span>
+      </h2>
+      <p class="mt-6 text-white/60 text-base sm:text-lg max-w-xl">
+        두개골 밑 깊숙한 상·하두하근부터 견갑거근까지,<br class="hidden sm:block" /> 손이 닿지 않는 속근육이 뭉쳐 있습니다.
+      </p>
+    </div>
+
+    <!-- beat 2 (settle: full-bleed anatomy + text overlay) -->
+    <div class="beat">
+      <img src="assets/neck_anatomy.jpg" alt="경추·속근육 해부학" class="absolute inset-0 w-full h-full object-cover" draggable="false" />
+      <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(0,9,38,.95) 0%,rgba(0,9,38,.8) 30%,rgba(0,9,38,.25) 62%,transparent 82%)"></div>
+      <div class="absolute inset-0" style="background:linear-gradient(0deg,rgba(0,9,38,.7),transparent 42%)"></div>
+      <div class="relative w-full max-w-6xl mx-auto">
+        <div class="max-w-xl text-left">
+          <span class="inline-block rounded-full bg-orange/15 text-orange text-xs font-bold tracking-wider px-3 py-1.5 mb-6">ANATOMICAL TARGETING</span>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
+            해부학적 각도로<br />빈틈없이 <span class="grad-text">풀어내다</span>
+          </h2>
+          <p class="mt-6 text-white/75 text-base sm:text-lg max-w-lg">
+            최적의 각도로 파고들어 굳은 속근육을 부드럽게 이완. 매일의 뻐근함을 뿌리부터 풀어줍니다.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <div class="rounded-2xl ring-soft bg-white/[0.05] backdrop-blur-sm px-5 py-4">
+              <p class="text-2xl font-bold text-powder">4대</p>
+              <p class="text-sm text-white/60 mt-1">핵심 원인 근육 집중</p>
+            </div>
+            <div class="rounded-2xl ring-soft bg-white/[0.05] backdrop-blur-sm px-5 py-4">
+              <p class="text-2xl font-bold text-powder">깊은 압</p>
+              <p class="text-sm text-white/60 mt-1">속근육까지 도달</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MASSAGE MECHANISM (scene) ===================== -->
+<section class="scene" style="height:440vh">
+  <div class="scene-stage">
+    <div class="absolute inset-0" style="background:radial-gradient(circle at 30% 30%,rgba(15,82,186,.2),transparent 55%),#02061a"></div>
+
+    <!-- beat 0 -->
+    <div class="beat">
+      <span class="inline-block rounded-full bg-sapphire/15 text-powder text-xs font-bold tracking-wider px-3 py-1.5 mb-7">DEEP TISSUE · 3D 입체 롤링</span>
+      <h2 class="text-4xl sm:text-6xl font-bold">단순한 회전이<br />아닙니다</h2>
+    </div>
+
+    <!-- beat 1 -->
+    <div class="beat">
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
+        전문가의 엄지와 검지를 재현한<br /><span class="grad-text">4개의 입체 안마구</span>
+      </h2>
+    </div>
+
+    <!-- beat 2 -->
+    <div class="beat">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+        쥐어짜듯 비틀어 푸는<br /><span class="grad-text">3D 입체 롤링</span>
+      </h2>
+      <p class="mt-6 text-white/65 text-base sm:text-lg max-w-xl">
+        경추 C커브를 살리는 밀도로 받쳐주고, 엄지·검지의 손맛 그대로 굳은 속근육을 깊게 풀어냅니다.
+      </p>
+    </div>
+
+    <!-- beat 3 (settle) : 안마구 자동 수납 -->
+    <div class="beat">
+      <span class="inline-block rounded-full bg-powder/15 text-powder text-xs font-bold tracking-wider px-3 py-1.5 mb-7">AUTO-RETRACT</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+        쓸 땐 나오고, 누울 땐 쏙<br /><span class="grad-text">안마구 자동 수납 기술</span>
+      </h2>
+      <p class="mt-6 text-white/65 text-base sm:text-lg max-w-xl">
+        마사지가 끝나면 안마구가 자동으로 수납되어, 그대로 베고 잠들 수 있는 평평한 베개로 돌아옵니다.
+      </p>
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-4xl">
+        <div class="rounded-3xl bg-white/[0.03] ring-soft p-7">
+          <p class="text-4xl font-extrabold grad-text">AUTO</p>
+          <p class="mt-3 font-semibold">안마구 자동 수납</p>
+          <p class="mt-2 text-sm text-white/55">사용 후 안마구가 스르륵 들어갑니다.</p>
+        </div>
+        <div class="rounded-3xl bg-white/[0.03] ring-soft p-7">
+          <p class="text-4xl font-extrabold grad-text">FLAT</p>
+          <p class="mt-3 font-semibold">평평한 취침 모드</p>
+          <p class="mt-2 text-sm text-white/55">배기지 않아 그대로 베고 주무세요.</p>
+        </div>
+        <div class="rounded-3xl bg-white/[0.03] ring-soft p-7">
+          <p class="text-4xl font-extrabold grad-text">4개</p>
+          <p class="mt-3 font-semibold">입체 안마구</p>
+          <p class="mt-2 text-sm text-white/55">엄지·검지를 재현한 입체 설계.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VIDEO BREAK 2 (massage in motion) ===================== -->
+<section class="relative h-[80vh] min-h-[460px] w-full overflow-hidden bg-black">
+  <!-- 영상 교체: <img> 포스터를 <video ...> 로 교체 -->
+  <img src="assets/control.png" alt="비브아 딥슬립 마사지 작동 영상" class="absolute inset-0 h-full w-full object-cover scale-105 opacity-45" />
+  <div class="absolute inset-0" style="background:linear-gradient(180deg,#000926 0%,rgba(0,9,38,.12) 50%,#000926 100%)"></div>
+  <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+    <p class="reveal text-[11px] tracking-[0.32em] text-powder/80 mb-5">MASSAGE IN MOTION</p>
+    <h2 class="reveal d1 text-3xl sm:text-5xl font-bold">전문가의 손길을<br />그대로, 눈으로 확인하세요</h2>
+    <p class="reveal d1 mt-6 text-white/45 text-sm">＊ 마사지 작동 영상 영역 — 영상 파일을 주시면 넣어드릴게요</p>
+  </div>
+</section>
+
+<!-- ===================== ANGLE MODES (interactive, normal flow) ===================== -->
+<section id="angle" class="relative bg-white text-navy">
+  <div class="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="reveal inline-block rounded-full bg-sapphire/10 text-sapphire text-xs font-bold tracking-wider px-3 py-1.5 mb-6">3-STEP PRECISION TILTING</span>
+      <h2 class="reveal text-3xl sm:text-4xl lg:text-5xl font-bold">
+        내 목에 맞는 최적의 각도,<br /> 3단계 정밀 틸팅
+      </h2>
+      <p class="reveal d1 mt-5 text-navy/55 text-base sm:text-lg">
+        M버튼을 누를 때마다 <span class="font-semibold text-navy">높은 → 중간 → 낮은</span> 3단계로 정밀하게 틸팅.
+        목 길이와 취향에 꼭 맞는 각도를 직접 찾아 베개에 그대로 담아두세요.
+      </p>
+    </div>
+
+    <div class="reveal d1 mt-14 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div class="relative rounded-3xl overflow-hidden bg-[#f3f1ec]">
+        <img src="assets/button.png" alt="비브아 딥슬립 M버튼 조작" class="w-full object-cover" />
+        <div class="absolute left-5 bottom-5 flex items-center gap-2">
+          <span class="pulse-ring relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-navy text-white text-xs font-bold">M</span>
+          <span class="rounded-full bg-navy/90 text-white text-xs px-3 py-1.5">눌러서 각도 전환</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex gap-2 mb-6" id="modeTabs">
+          <button data-mode="0" class="mode-tab flex-1 rounded-xl py-3 text-sm font-bold transition bg-sapphire text-white">높은 각도</button>
+          <button data-mode="1" class="mode-tab flex-1 rounded-xl py-3 text-sm font-bold transition bg-navy/5 text-navy/60">중간 각도</button>
+          <button data-mode="2" class="mode-tab flex-1 rounded-xl py-3 text-sm font-bold transition bg-navy/5 text-navy/60">낮은 각도</button>
+        </div>
+        <div id="modePanel" class="rounded-3xl bg-[#f7f9fc] ring-1 ring-navy/5 p-8 min-h-[200px]">
+          <p class="text-xs font-bold tracking-wider text-sapphire" id="modeKicker">1단계 · 높은 각도</p>
+          <h3 class="mt-2 text-2xl font-extrabold" id="modeTitle">강한 압을 원한다면</h3>
+          <p class="mt-3 text-navy/60" id="modeDesc">목이 길거나 강한 압을 원한다면, 높은 각도로 측근육까지 시원하게 풀어주세요.</p>
+        </div>
+        <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+          <div class="rounded-2xl bg-navy/[0.03] py-4"><p class="text-lg font-bold text-sapphire">높은</p><p class="text-xs text-navy/50 mt-1">강한 압 · 측근육</p></div>
+          <div class="rounded-2xl bg-navy/[0.03] py-4"><p class="text-lg font-bold text-sapphire">중간</p><p class="text-xs text-navy/50 mt-1">데일리 경추</p></div>
+          <div class="rounded-2xl bg-navy/[0.03] py-4"><p class="text-lg font-bold text-sapphire">낮은</p><p class="text-xs text-navy/50 mt-1">취침 전 휴식</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MEMORY FOAM / COMFORT (scene) ===================== -->
+<section class="scene" style="height:300vh">
+  <div class="scene-stage">
+    <div class="absolute inset-0" style="background:radial-gradient(circle at 70% 30%,rgba(70,197,215,.12),transparent 55%),#000926"></div>
+
+    <!-- beat 0 -->
+    <div class="beat">
+      <span class="inline-block rounded-full bg-powder/15 text-powder text-xs font-bold tracking-wider px-3 py-1.5 mb-7">HIGH-DENSITY MEMORY FOAM</span>
+      <h2 class="text-4xl sm:text-6xl font-bold">어떤 자세로 누워도,<br />편안함은 그대로</h2>
+    </div>
+
+    <!-- beat 1 (settle: full-bleed memory-foam video + text overlay) -->
+    <div class="beat">
+      <video class="absolute inset-0 w-full h-full object-cover" data-autoplay autoplay muted loop playsinline preload="metadata" poster="assets/memory_foam_poster.jpg">
+        <source src="assets/memory_foam.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(0,9,38,.94) 0%,rgba(0,9,38,.82) 34%,rgba(0,9,38,.4) 64%,rgba(0,9,38,.12) 100%)"></div>
+      <div class="absolute inset-0" style="background:linear-gradient(0deg,rgba(0,9,38,.55),transparent 45%)"></div>
+      <div class="relative w-full max-w-6xl mx-auto">
+        <div class="max-w-xl text-left">
+          <span class="inline-block rounded-full bg-powder/15 text-powder text-xs font-bold tracking-wider px-3 py-1.5 mb-6">HIGH-DENSITY MEMORY FOAM</span>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
+            어떤 자세든 OK!<br /><span class="grad-text">호텔급 고밀도 메모리폼</span>
+          </h2>
+          <p class="mt-6 text-white/75 text-base sm:text-lg max-w-lg">
+            머리와 목을 천천히 감싸 압력을 고르게 분산. 옆으로 누워도, 뒤척여도 한결같은 지지력으로 받쳐줍니다.
+          </p>
+          <ul class="mt-7 space-y-3 text-white/85">
+            <li class="flex items-center gap-3"><span class="text-powder">✓</span> 고밀도 복원력 — 천천히 감싸고 제자리로</li>
+            <li class="flex items-center gap-3"><span class="text-powder">✓</span> 머리·목 압력 분산으로 배김 없는 편안함</li>
+            <li class="flex items-center gap-3"><span class="text-powder">✓</span> 자세가 바뀌어도 일정하게 받치는 지지력</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HEATING / 온열 ===================== -->
+<section id="heat" class="relative overflow-hidden bg-[#02061a] border-t border-white/10">
+  <img src="assets/heat_mechanism.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-60" />
+  <div class="absolute inset-0" style="background:radial-gradient(circle at 50% 40%,rgba(255,107,53,.22),transparent 58%),linear-gradient(180deg,rgba(2,6,26,.55),rgba(2,6,26,.35) 45%,rgba(2,6,26,.8))"></div>
+  <div class="relative max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
+    <span class="reveal inline-block rounded-full bg-orange/15 text-orange text-xs font-bold tracking-wider px-3 py-1.5 mb-6">WARM THERAPY</span>
+    <h2 class="reveal text-3xl sm:text-4xl lg:text-5xl font-bold">
+      따뜻하게 데우면,<br /><span style="background:linear-gradient(100deg,#FFBF00,#FF6B35);-webkit-background-clip:text;background-clip:text;color:transparent;">더 깊게 풀립니다</span>
+    </h2>
+    <p class="reveal d1 mt-6 text-white/60 text-base sm:text-lg max-w-xl mx-auto">
+      은은한 온열이 굳은 근육을 부드럽게 데워, 마사지가 더 깊숙이 스며들도록. 잠들기 전 따뜻한 이완으로 하루의 긴장을 녹여보세요.
+    </p>
+    <div class="reveal d1 mt-12 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
+      <div class="rounded-3xl bg-white/[0.03] ring-soft p-7">
+        <p class="text-3xl font-extrabold" style="color:#FF6B35">온열</p>
+        <p class="mt-3 font-semibold">근육 이완</p>
+        <p class="mt-2 text-sm text-white/55">따뜻하게 데워 굳은 근육을 부드럽게 풀어줍니다.</p>
+      </div>
+      <div class="rounded-3xl bg-white/[0.03] ring-soft p-7">
+        <p class="text-3xl font-extrabold" style="color:#FF8C42">찜질감</p>
+        <p class="mt-3 font-semibold">포근한 온도</p>
+        <p class="mt-2 text-sm text-white/55">뭉친 목·어깨를 감싸는 따뜻한 찜질감.</p>
+      </div>
+      <div class="rounded-3xl bg-white/[0.03] ring-soft p-7">
+        <p class="text-3xl font-extrabold" style="color:#FFBF00">수면</p>
+        <p class="mt-3 font-semibold">취침 전 이완</p>
+        <p class="mt-2 text-sm text-white/55">온열과 마사지로 더 빠르게 스르륵 잠들도록.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COVER ===================== -->
+<section class="relative overflow-hidden bg-white text-navy">
+  <video class="absolute inset-0 h-full w-full object-cover opacity-40" data-autoplay autoplay muted loop playsinline preload="metadata">
+    <source src="assets/flutter_bg.mp4" type="video/mp4" />
+  </video>
+  <div class="relative max-w-6xl mx-auto px-6 py-24 sm:py-32 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="reveal inline-block rounded-full bg-sapphire/10 text-sapphire text-xs font-bold tracking-wider px-3 py-1.5 mb-6">PREMIUM COVER</span>
+      <h2 class="reveal text-3xl sm:text-4xl lg:text-5xl font-bold">
+        청결을 위한<br /> 프리미엄 베개 커버
+      </h2>
+      <p class="reveal d1 mt-6 text-navy/60 text-lg max-w-lg">
+        피부에 직접 닿는 만큼, 부드러운 면 소재를 사용했어요.
+        커버만 분리해 세탁하고 언제나 쾌적하게 사용하세요.
+      </p>
+      <p class="reveal d2 mt-4 text-sm text-navy/40">* 본체 기기가 아닌 프리미엄 커버만 분리 세탁해 주세요.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="rounded-3xl overflow-hidden ring-1 ring-navy/5 bg-[#f3f1ec]">
+        <video class="w-full object-cover" data-autoplay autoplay muted loop playsinline preload="metadata" poster="assets/cover.png">
+          <source src="assets/cover_video.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="review" class="relative bg-navy">
+  <div class="max-w-6xl mx-auto px-6 py-24 sm:py-28">
+    <div class="text-center mb-14">
+      <div class="reveal text-5xl font-extrabold grad-text">4.8 <span class="text-yellow">★</span></div>
+      <p class="reveal d1 mt-3 text-white/60">120,000+ 개의 실사용 리뷰가 증명합니다.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <figure class="reveal rounded-3xl bg-white/[0.04] ring-soft p-7">
+        <div class="text-yellow text-sm mb-3">★★★★★</div>
+        <blockquote class="text-white/80">"자고 일어나면 늘 뻐근하던 목이 한결 가벼워요. 높은 각도로 두면 정말 시원합니다."</blockquote>
+        <figcaption class="mt-5 text-sm text-white/45">김** · 거북목 직장인</figcaption>
+      </figure>
+      <figure class="reveal d1 rounded-3xl bg-white/[0.04] ring-soft p-7">
+        <div class="text-yellow text-sm mb-3">★★★★★</div>
+        <blockquote class="text-white/80">"마사지 끝나면 안마구가 쏙 들어가서 그냥 베고 자요. 온열까지 있어 겨울 취침 전에 딱이에요."</blockquote>
+        <figcaption class="mt-5 text-sm text-white/45">이** · 두 아이 엄마</figcaption>
+      </figure>
+      <figure class="reveal d2 rounded-3xl bg-white/[0.04] ring-soft p-7">
+        <div class="text-yellow text-sm mb-3">★★★★★</div>
+        <blockquote class="text-white/80">"각도를 직접 맞출 수 있어서 좋아요. 낮은 각도로 두면 스르륵 잠들어요."</blockquote>
+        <figcaption class="mt-5 text-sm text-white/45">박** · 예민한 수면러</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section id="buy" class="relative overflow-hidden">
+  <div class="absolute inset-0" style="background:radial-gradient(circle at 50% 0%,rgba(15,82,186,.5),transparent 60%),#000926"></div>
+  <div class="relative max-w-3xl mx-auto px-6 py-28 sm:py-36 text-center">
+    <p class="reveal text-powder text-sm tracking-[0.2em] mb-5">이제, 기다림의 끝</p>
+    <h2 class="reveal text-4xl sm:text-5xl lg:text-6xl font-bold">
+      비브아 딥슬립을<br /> 만나보세요
+    </h2>
+    <p class="reveal d1 mt-6 text-white/65 text-lg">마사지 베개 1위가 만든, 역대급 경추 케어를 지금 경험하세요.</p>
+    <div class="reveal d2 mt-10 flex justify-center">
+      <a data-buy href="https://vivoir.kr" target="_blank" rel="noopener" class="group inline-flex items-center gap-2.5 rounded-full bg-sapphire hover:bg-[#0c449b] transition px-10 py-4 text-base sm:text-lg font-bold text-white glow-blue">
+        구매하기
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <p class="reveal d2 mt-6 text-sm text-white/40">비브아 공식몰 바로가기 · 누적 판매 200,000+ · 리뷰 평점 4.8</p>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="border-t border-white/10 bg-[#04081f]">
+  <div class="max-w-6xl mx-auto px-6 py-14">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg class="h-5 w-auto text-white" viewBox="0 0 2235 395" role="img" aria-label="VIVOIR"><use href="#vivoirLogo"/></svg>
+          <span class="text-white/40 font-medium text-base">PLAY LAB</span>
+        </div>
+        <p class="mt-3 text-white/50 text-sm">쉽게, 즐겁게, 비브아답게 · PLAY EASY, FEEL GOOD</p>
+      </div>
+      <div class="flex gap-8 text-sm text-white/55">
+        <a href="#why" class="hover:text-white transition">제품 특징</a>
+        <a href="#review" class="hover:text-white transition">리뷰</a>
+        <a href="#buy" class="hover:text-white transition">구매</a>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/10 text-xs text-white/30">
+      © 2025 VIVOIR. All rights reserved. 본 페이지는 제품 소개용이며 일부 수치는 2025.11.01 기준입니다.
+    </div>
+  </div>
+</footer>
+
+<!-- mobile floating CTA -->
+<a data-buy href="https://vivoir.kr" target="_blank" rel="noopener" id="floatCta" class="md:hidden fixed bottom-4 inset-x-4 z-40 rounded-full bg-sapphire text-center py-4 font-bold glow-blue translate-y-24 transition-transform duration-300">지금 구매하기</a>
+
+<script>
+  // nav background + floating CTA + scroll cue on scroll
+  const nav = document.getElementById('nav');
+  const floatCta = document.getElementById('floatCta');
+  const scrollCue = document.getElementById('scrollCue');
+  const onScrollUI = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('bg-navy/80', y > 30);
+    nav.classList.toggle('backdrop-blur-md', y > 30);
+    nav.classList.toggle('border-b', y > 30);
+    nav.classList.toggle('border-white/10', y > 30);
+    floatCta.classList.toggle('translate-y-24', y < 600);
+    if (scrollCue) scrollCue.style.opacity = Math.max(0, 1 - y / 160);
+  };
+  window.addEventListener('scroll', onScrollUI, { passive: true });
+  onScrollUI();
+
+  // mobile menu
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+  // enter reveal (light/normal sections)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // count-up
+  const fmt = (n, dec) => dec ? n.toFixed(dec) : Math.round(n).toLocaleString('ko-KR');
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const to = parseFloat(el.dataset.to);
+      const dec = parseInt(el.dataset.dec || '0');
+      const dur = 1600; const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(to * eased, dec);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      countIO.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.count').forEach(el => countIO.observe(el));
+
+  // play full-bleed videos only while on-screen (robust autoplay + saves decode when off-screen)
+  const vIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.25 });
+  document.querySelectorAll('video[data-autoplay]').forEach(v => vIO.observe(v));
+
+  // angle mode switch
+  const modes = [
+    { k: '1단계 · 높은 각도', t: '강한 압을 원한다면', d: '목이 길거나 강한 압을 원한다면, 높은 각도로 측근육까지 시원하게 풀어주세요.' },
+    { k: '2단계 · 중간 각도', t: '매일의 표준 편안함', d: '누구나 편안하게 느끼는 평균 각도로, 데일리 경추 관리에 최적화되었습니다.' },
+    { k: '3단계 · 낮은 각도', t: '잠들기 전 부담 없이', d: '자극에 예민하거나 목이 짧은 분들도 배김 없이 편안하게 잠드실 수 있습니다.' },
+  ];
+  const tabs = document.querySelectorAll('.mode-tab');
+  const mk = document.getElementById('modeKicker');
+  const mt = document.getElementById('modeTitle');
+  const md = document.getElementById('modeDesc');
+  const setMode = (i) => {
+    tabs.forEach((t, idx) => {
+      const on = idx === i;
+      t.classList.toggle('bg-sapphire', on);
+      t.classList.toggle('text-white', on);
+      t.classList.toggle('bg-navy/5', !on);
+      t.classList.toggle('text-navy/60', !on);
+    });
+    mk.textContent = modes[i].k; mt.textContent = modes[i].t; md.textContent = modes[i].d;
+  };
+  tabs.forEach((t, i) => t.addEventListener('click', () => setMode(i)));
+
+  // ===== scroll-storytelling engine (pinned scenes, one beat at a time) =====
+  (function () {
+    const prefersReduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scenes = [...document.querySelectorAll('.scene')];
+    scenes.forEach(s => {
+      s._beats = [...s.querySelectorAll('.beat')];
+      s._layers = [...s.querySelectorAll('.scene-layer')];
+      s._layers.forEach(l => { try { l._a = JSON.parse(l.dataset.anim || '{}'); } catch (e) { l._a = {}; } });
+    });
+    const bar = document.getElementById('progressBar');
+    const clamp01 = v => v < 0 ? 0 : v > 1 ? 1 : v;
+    const lerp = (a, b, t) => a + (b - a) * t;
+
+    // crossfade thresholds (u-space; adjacent beat centers are exactly 1.0 apart).
+    // |u|<=H : fully visible (hold).  H<|u|<F : linear fade.
+    // With H=0.3, F=0.7 the two neighbouring beats' opacities sum to ~1.0 across the
+    // whole handoff — a true crossfade that never dips to an empty/dark frame (no "걸림").
+    const H = 0.3, F = 0.7;
+    function frame() {
+      const vh = window.innerHeight;
+      const sc = document.documentElement;
+      // ---- PHASE 1: reads only (batch all layout queries → no read/write thrash) ----
+      const max = sc.scrollHeight - vh;
+      const barW = max > 0 ? (sc.scrollTop / max * 100) : 0;
+      const ps = prefersReduce ? null : scenes.map(s => {
+        const rect = s.getBoundingClientRect();
+        const total = s.offsetHeight - vh;
+        return clamp01(total > 0 ? (-rect.top) / total : (rect.top <= 0 ? 1 : 0));
+      });
+      // ---- PHASE 2: writes only ----
+      if (bar) bar.style.width = barW + '%';
+      if (prefersReduce) return;
+      for (let si = 0; si < scenes.length; si++) {
+        const s = scenes[si], p = ps[si];
+        const beats = s._beats, n = beats.length;
+        for (let i = 0; i < n; i++) {
+          let u = (p - (i + 0.5) / n) * n;   // 0 at this beat's center, ±1 at neighbor centers
+          if (i === 0) u = Math.max(u, 0);     // first beat: shown immediately (no empty hero on load / scene entry)
+          if (i === n - 1) u = Math.min(u, 0); // last beat: stays full once reached, hands off to next section
+          const au = Math.abs(u);
+          const op = clamp01((F - au) / (F - H));
+          const ty = -u * 50;
+          const b = beats[i];
+          b.style.opacity = op;
+          b.style.transform = `translate3d(0,${ty}px,0)`;
+          b.style.pointerEvents = op > 0.6 ? 'auto' : 'none';
+        }
+        for (const l of s._layers) {
+          const a = l._a; const r = a.range || [0, 1];
+          const t = clamp01((p - r[0]) / ((r[1] - r[0]) || 1));
+          let tf = 'translateX(-50%) ';
+          if (a.y) tf += `translateY(${lerp(a.y[0], a.y[1], t)}px) `;
+          if (a.scale) tf += `scale(${lerp(a.scale[0], a.scale[1], t)}) `;
+          l.style.transform = tf;
+          if (a.opacity) l.style.opacity = lerp(a.opacity[0], a.opacity[1], t);
+        }
+      }
+    }
+    let ticking = false;
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(() => { frame(); ticking = false; }); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    frame();
+  })();
+
+  // ===== 자사몰(공식몰) 구매 링크 — 여기 한 줄만 바꾸면 모든 구매 버튼에 반영됩니다 =====
+  const SHOP_URL = 'https://vivoir.kr';
+  document.querySelectorAll('[data-buy]').forEach(a => { a.href = SHOP_URL; });
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# 작업용 / 사이트에 불필요한 파일
+full_page.png
+
+# 미사용 구버전 에셋 (현재 index.html 에서 참조하지 않음)
+assets/pillow_hero.jpg
+assets/hero_pillow.png
+assets/neck_spine.png
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
